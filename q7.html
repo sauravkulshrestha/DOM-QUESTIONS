@@ -31,5 +31,36 @@
     <p>Caps on!</p>
       
 </body>
+<script>
+   let input = document.querySelector("#pass");
+   let msg = document.querySelector("p");
 
+   input.addEventListener("keypress" , function(e){
+    if(e.getModifierState("CapsLock")){
+        msg.style.display = "block";
+       e.preventDefault();
+    }else{
+        msg.style.display = "none";
+    }
+
+   })
+//    let isShift ;
+//    document.addEventListener("keydown" , function(e){
+//        if(e.key == "Shift"){
+//         isShift = true;
+//        }
+//    })
+
+//    document.addEventListener("keyup" , function(e){
+//        if(e.key == "Shift"){
+//         isShift = false;
+//        }
+//    })
+
+
+// document.addEventListener("keydown" , function(e){
+//     console.log(e.key);
+// })
+
+</script>
 </html> 
